@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sign_in/widgets/default_outline_button.dart';
 import 'package:flutter_sign_in/widgets/default_raised_button.dart';
 
 class IntroductionView extends StatelessWidget {
@@ -13,7 +14,12 @@ class IntroductionView extends StatelessWidget {
           children: <Widget>[
             DefaultRaisedButton(
               onPressed: () {},
-              content: 'Sign In',
+              content: 'Raised Button',
+            ),
+            const SizedBox(height: 8.0),
+            DefaultOutlineButton(
+              onPressed: () {},
+              content: 'Outline Button',
             ),
           ],
         ),

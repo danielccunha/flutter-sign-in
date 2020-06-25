@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class DefaultRaisedButton extends StatelessWidget {
+class DefaultOutlineButton extends StatelessWidget {
   final VoidCallback onPressed;
   final String content;
 
-  const DefaultRaisedButton({
+  const DefaultOutlineButton({
     Key key,
     @required this.onPressed,
     @required this.content,
@@ -15,7 +15,7 @@ class DefaultRaisedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
 
-    return RaisedButton(
+    return OutlineButton(
       onPressed: this.onPressed,
       child: Text(
         content,
@@ -23,12 +23,10 @@ class DefaultRaisedButton extends StatelessWidget {
           fontSize: 16.0,
         ),
       ),
-      textTheme: ButtonTextTheme.primary,
-      color: theme.primaryColor,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.all(
-          Radius.circular(4.0),
-        ),
+      textColor: theme.primaryColor,
+      borderSide: BorderSide(
+        width: 1.5,
+        color: theme.primaryColor,
       ),
     );
   }
