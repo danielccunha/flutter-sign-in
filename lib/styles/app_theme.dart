@@ -20,6 +20,10 @@ abstract class AppTheme {
         border: const OutlineInputBorder(),
         enabledBorder: InputBorder.none,
       ),
+      textTheme: theme.textTheme.copyWith(
+        bodyText1: const TextStyle(color: AppColors.text),
+        subtitle1: const TextStyle(color: AppColors.text),
+      ),
     );
   }
 }
