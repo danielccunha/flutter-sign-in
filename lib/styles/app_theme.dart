@@ -11,6 +11,9 @@ abstract class AppTheme {
       visualDensity: VisualDensity.adaptivePlatformDensity,
       scaffoldBackgroundColor: AppColors.background,
       primaryColor: AppColors.primary,
+      buttonTheme: theme.buttonTheme.copyWith(
+        height: 56.0,
+      ),
     );
   }
 }

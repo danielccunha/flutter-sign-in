@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sign_in/widgets/default_raised_button.dart';
 
 class IntroductionView extends StatelessWidget {
   @override
@@ -6,21 +7,15 @@ class IntroductionView extends StatelessWidget {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
-        child: Form(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              TextFormField(),
-              const SizedBox(height: 8.0),
-              TextFormField(),
-              const SizedBox(height: 8.0),
-              RaisedButton(
-                onPressed: () {},
-                child: const Text('Sign In'),
-              ),
-            ],
-          ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            DefaultRaisedButton(
+              onPressed: () {},
+              content: 'Sign In',
+            ),
+          ],
         ),
       ),
     );
