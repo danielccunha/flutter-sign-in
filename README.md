@@ -1,16 +1,21 @@
-# flutter_sign_in
+<div align="center">
+  <h1>
+    flutter-sign-in
+  </h1>
 
-A new Flutter project.
+  <a href="https://www.linkedin.com/in/daniel-cunha-53053816b/">
+    <img alt="Made by Daniel Cunha" src="https://img.shields.io/badge/made%20by-Daniel%20Cunha-%23?color=%230060FF">
+  </a>
+  <a href="https://github.com/danielccunha/flutter-sign-in/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/danielccunha/flutter-sign-in?color=%230060FF">
+  </a>
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen?color=%230060FF">
+</div>
 
-## Getting Started
+## :computer: Project
 
-This project is a starting point for a Flutter application.
+A simple Flutter application with Sign In and Sign Up pages which I developed to test some features and use it as a template in the future.
 
-A few resources to get you started if this is your first Flutter project:
+## :memo: License
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
