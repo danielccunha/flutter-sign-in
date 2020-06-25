@@ -3,11 +3,15 @@ import 'package:flutter/material.dart';
 class DefaultRaisedButton extends StatelessWidget {
   final VoidCallback onPressed;
   final String content;
+  final Color color;
+  final Color textColor;
 
   const DefaultRaisedButton({
     Key key,
     @required this.onPressed,
     @required this.content,
+    this.color,
+    this.textColor,
   })  : assert(content != null),
         super(key: key);
 
@@ -17,18 +21,12 @@ class DefaultRaisedButton extends StatelessWidget {
 
     return RaisedButton(
       onPressed: this.onPressed,
+      textTheme: ButtonTextTheme.primary,
+      color: color ?? theme.primaryColor,
+      textColor: textColor,
       child: Text(
         content,
-        style: const TextStyle(
-          fontSize: 16.0,
-        ),
-      ),
-      textTheme: ButtonTextTheme.primary,
-      color: theme.primaryColor,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.all(
-          Radius.circular(4.0),
-        ),
+        style: const TextStyle(fontSize: 16.0),
       ),
     );
   }

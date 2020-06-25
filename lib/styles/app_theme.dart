@@ -14,6 +14,12 @@ abstract class AppTheme {
       buttonTheme: theme.buttonTheme.copyWith(
         height: 56.0,
       ),
+      inputDecorationTheme: theme.inputDecorationTheme.copyWith(
+        filled: true,
+        fillColor: const Color(0xFFF0F0F8),
+        border: const OutlineInputBorder(),
+        enabledBorder: InputBorder.none,
+      ),
     );
   }
 }

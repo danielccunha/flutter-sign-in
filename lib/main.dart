@@ -11,9 +11,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Pandora',
-      routes: Routes.create(),
       debugShowCheckedModeBanner: false,
       theme: AppTheme.create(context),
+      routes: Routes.create(),
+      initialRoute: Routes.login,
     );
   }
 }

@@ -3,17 +3,20 @@ import 'package:flutter/material.dart';
 class DefaultOutlineButton extends StatelessWidget {
   final VoidCallback onPressed;
   final String content;
+  final Color color;
 
   const DefaultOutlineButton({
     Key key,
     @required this.onPressed,
     @required this.content,
+    this.color,
   })  : assert(content != null),
         super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final buttonColor = color ?? theme.primaryColor;
 
     return OutlineButton(
       onPressed: this.onPressed,
@@ -23,11 +26,11 @@ class DefaultOutlineButton extends StatelessWidget {
           fontSize: 16.0,
         ),
       ),
-      textColor: theme.primaryColor,
+      textColor: buttonColor,
       borderSide: BorderSide(
-        width: 1.5,
-        color: theme.primaryColor,
+        color: buttonColor,
       ),
+      highlightedBorderColor: buttonColor,
     );
   }
 }
