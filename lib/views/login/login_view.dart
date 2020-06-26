@@ -16,6 +16,7 @@ class LoginView extends StatelessWidget {
             constraints: BoxConstraints(minHeight: cons.maxHeight),
             child: IntrinsicHeight(
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
                   const Spacer(flex: 2),
                   SizedBox(height: mediaQuery.viewPadding.top),

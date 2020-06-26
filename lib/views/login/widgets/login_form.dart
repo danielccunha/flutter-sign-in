@@ -1,8 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sign_in/widgets/default_raised_button.dart';
 
-class LoginForm extends StatelessWidget {
+class LoginForm extends StatefulWidget {
+  @override
+  _LoginFormState createState() => _LoginFormState();
+}
+
+class _LoginFormState extends State<LoginForm> {
   final _passwordFocusNode = FocusNode();
+
+  @override
+  void dispose() {
+    _passwordFocusNode?.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
