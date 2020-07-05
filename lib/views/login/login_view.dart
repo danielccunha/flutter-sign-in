@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sign_in/routes.dart';
 import 'package:flutter_sign_in/views/login/widgets/login_form.dart';
 import 'package:flutter_sign_in/widgets/default_flat_button.dart';
+import 'package:flutter_sign_in/widgets/default_outline_button.dart';
 
 class LoginView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
     final mediaQuery = MediaQuery.of(context);
 
     return Scaffold(
@@ -29,23 +30,16 @@ class LoginView extends StatelessWidget {
                   Align(
                     alignment: Alignment.centerRight,
                     child: DefaultFlatButton(
-                      onPressed: () {},
+                      onPressed: () => Navigator.of(context).pushNamed(Routes.forgotPassword),
                       content: 'Forgot your password?',
                     ),
                   ),
                   const Spacer(flex: 4),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      const Text("Doesn't have an account?"),
-                      DefaultFlatButton(
-                        onPressed: () {},
-                        content: 'Register',
-                        color: theme.primaryColor,
-                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                      ),
-                    ],
+                  DefaultOutlineButton(
+                    onPressed: () => Navigator.of(context).pushNamed(Routes.register),
+                    content: 'Register',
                   ),
+                  const SizedBox(height: 16.0),
                 ],
               ),
             ),
